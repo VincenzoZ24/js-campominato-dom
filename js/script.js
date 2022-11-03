@@ -53,9 +53,9 @@ play.addEventListener("click", function () {
             arrNrandom.push(randomNumber);
             console.log(arrNrandom)
             if (arrNrandom.includes(randomNumber)) {
-                cell.addEventListener("click", function(){
-                    cell.style.color = "red"
-                })
+
+                cell.style.color = "red"
+
             }
         }
 
