@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    height: 100vh;
+    background-color: rgb(88, 240, 189);
+}
+.container_grid{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.container{
+   display: flex;
+   flex-wrap: wrap;
+   width: 600px;
+   height: 600px;
+   border: 1px solid black;
+   margin: auto;
+}
+.start{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+.cell{
+    border: 1px solid black;
+    width: calc(( 600px - 2px) / 10);
+    height: calc(( 600px - 2px) / 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start label{
+    margin-right: .5rem;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.start .play{
+    margin-left: .5rem;
+    background-color: white;
+    border: none;
+    padding: .3rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.cell.active{
+ background-color: blue;
+}
+.cell_medium.active{
+    background-color: blue;
+}
+.display_none{
+    display: none;
+}
+.cell_medium{
+    border: 1px solid black;
+    width: calc(( 600px - 2px) / 9);
+    height: calc(( 600px - 2px) / 9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cell_hard{
+    border: 1px solid black;
+    width: calc(( 600px - 2px) / 7);
+    height: calc(( 600px - 2px) / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cell_hard.active{
+    background-color: blue;
+}
+.container_medium{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    margin: auto;
+}
+.container_hard{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    margin: auto;
+}
+.container_hard{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    margin: auto;
+}
+.container_medium.display_none{
+    display: none;
+}
+.container_hard.display_none{
+    display: none;
+}
