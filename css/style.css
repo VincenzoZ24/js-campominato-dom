@@ -106,3 +106,6 @@ body{
 .container_hard.display_none{
     display: none;
 }
+.cell.red{
+    background-color: red;
+}

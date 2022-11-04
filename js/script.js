@@ -23,8 +23,19 @@ function getRandomInteger(min, max) {
 }
 let cell = document.querySelector(".cell")
 const arrNrandom = [];
+let randomNumber;
+
+for (let i = 1; i <= 16; i++) {
+    do {
+        randomNumber = getRandomInteger(1, 100);
+    } while (arrNrandom.includes(randomNumber))
+    arrNrandom.push(randomNumber);
+    console.log(arrNrandom)
+
+}
 
 play.addEventListener("click", function () {
+
     container.replaceChildren()
     if (livello.value === "Easy") {
         container_medium.classList.add("display_none");
@@ -40,24 +51,20 @@ play.addEventListener("click", function () {
 
 
             cell.addEventListener("click", function () {
-                cell.classList.toggle("active");
+                if(arrNrandom.includes(parseInt(cell.innerHTML))){
+                    cell.classList.add("red")
+                    console.log('red')
+                }else{
+                    cell.classList.toggle("active");
+                    console.log("active")
+                }
+                
+
             });
 
         };
 
-        let randomNumber;
-        for (let i = 1; i <= 16; i++) {
-            do {
-                randomNumber = getRandomInteger(1, 16);
-            } while (arrNrandom.includes(randomNumber))
-            arrNrandom.push(randomNumber);
-            console.log(arrNrandom)
-            if (arrNrandom.includes(randomNumber)) {
 
-                cell.style.color = "red"
-
-            }
-        }
 
 
     } else if (livello.value === "Medium") {
@@ -71,7 +78,13 @@ play.addEventListener("click", function () {
             container_medium.append(cell_medium);
             cell_medium.innerHTML = i;
             cell_medium.addEventListener("click", function () {
-                cell_medium.classList.toggle("active");
+                if(arrNrandom.includes(parseInt(cell_medium.innerHTML))){
+                    cell_medium.classList.add("red")
+                    console.log('red')
+                }else{
+                    cell_medium.classList.toggle("active");
+                    console.log("active")
+                }
             });
         };
     } else {
