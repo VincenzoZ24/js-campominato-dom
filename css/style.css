@@ -109,3 +109,6 @@ body{
 .cell.red{
     background-color: red;
 }
+.cell_medium.cell.red{
+    background-color: red;
+}
